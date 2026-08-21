@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] - 2026-08-21
+
+### Fixed
+- `manifest.json` version, which had drifted out of sync since 0.2.0.
+
 ## [0.2.0] - 2026-08-21
 
 ### Added
