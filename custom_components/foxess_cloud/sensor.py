@@ -19,6 +19,11 @@ DEVICE_CLASS_MAP = {
     "power": SensorDeviceClass.POWER,
     "energy": SensorDeviceClass.ENERGY,
     "battery": SensorDeviceClass.BATTERY,
+    "voltage": SensorDeviceClass.VOLTAGE,
+    "current": SensorDeviceClass.CURRENT,
+    "frequency": SensorDeviceClass.FREQUENCY,
+    "temperature": SensorDeviceClass.TEMPERATURE,
+    "power_factor": SensorDeviceClass.POWER_FACTOR,
 }
 STATE_CLASS_MAP = {
     "measurement": SensorStateClass.MEASUREMENT,
