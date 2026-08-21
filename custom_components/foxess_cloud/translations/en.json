@@ -1,0 +1,27 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "FoxESS Cloud",
+        "description": "Generate an API key at foxesscloud.com under User Profile → API Management, then paste it here.",
+        "data": {
+          "api_key": "API Key"
+        }
+      },
+      "device": {
+        "title": "Select inverter",
+        "data": {
+          "device_sn": "Device serial number"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API key.",
+      "cannot_connect": "Could not connect to FoxESS Cloud.",
+      "no_devices_found": "No devices found for this account."
+    },
+    "abort": {
+      "already_configured": "This device is already configured."
+    }
+  }
+}
