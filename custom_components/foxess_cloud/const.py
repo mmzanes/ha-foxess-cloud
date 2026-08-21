@@ -19,6 +19,8 @@ VARIABLES = {
     "generation": ("Total Generation", "kWh", "energy", "total_increasing"),
     "gridConsumptionPower": ("Grid Consumption Power", "kW", "power", "measurement"),
     "feedinPower": ("Grid Feed-in Power", "kW", "power", "measurement"),
+    "gridConsumption": ("Energy Imported from Grid", "kWh", "energy", "total_increasing"),
+    "feedin": ("Energy Exported to Grid", "kWh", "energy", "total_increasing"),
     "loadsPower": ("Loads Power", "kW", "power", "measurement"),
     # PV strings (MPPT 1 and 2 — extend with pv3*/pv4* if your inverter has more)
     "pv1Volt": ("PV1 Voltage", "V", "voltage", "measurement"),

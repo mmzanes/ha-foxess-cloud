@@ -10,7 +10,8 @@ for any inverter registered on FoxESS Cloud.
 - PV Power
 - Today's Yield
 - Total Generation
-- Grid Consumption Power
+- Grid Consumption Power / Grid Feed-in Power (instantaneous, kW)
+- Energy Imported from Grid / Energy Exported to Grid (cumulative, kWh)
 - Loads Power
 - Battery SoC (if applicable)
 
@@ -42,6 +43,9 @@ directory and restart.
 1. Settings → Dashboards → Energy → Solar panels → Add solar production.
 2. Pick the **Total Generation** sensor (cumulative, not Today's Yield — HA
    derives daily/monthly breakdowns from the cumulative counter itself).
+3. Under Electricity grid → Add, set **Energy Imported from Grid** as the
+   grid consumption source and **Energy Exported to Grid** as the return-to-grid
+   source (use the cumulative kWh sensors, not the kW power ones).
 
 ### Live monitoring dashboard (current power, grid, inverter status)
 

@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.4.0] - 2026-08-21
+
+### Added
+- Cumulative energy sensors for grid import/export: Energy Imported from Grid
+  (`gridConsumption`) and Energy Exported to Grid (`feedin`), usable as sources
+  in the Energy dashboard's grid consumption/return sections.
+
 ## [0.3.0] - 2026-08-21
 
 ### Fixed

@@ -60,6 +60,8 @@ views:
           - entity: sensor.foxess_inverter_SN_grid_frequency
           - entity: sensor.foxess_inverter_SN_grid_power
           - entity: sensor.foxess_inverter_SN_power_factor
+          - entity: sensor.foxess_inverter_SN_energy_imported_from_grid
+          - entity: sensor.foxess_inverter_SN_energy_exported_to_grid
 
       - type: entities
         title: Inverter Status
