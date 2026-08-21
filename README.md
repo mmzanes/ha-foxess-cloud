@@ -35,6 +35,24 @@ directory and restart.
 2. In Home Assistant: **Settings → Devices & Services → Add Integration → FoxESS Cloud**.
 3. Paste the API key, then pick your inverter's serial number from the list.
 
+## Dashboards
+
+### Energy dashboard (generation history, daily/monthly totals)
+
+1. Settings → Dashboards → Energy → Solar panels → Add solar production.
+2. Pick the **Total Generation** sensor (cumulative, not Today's Yield — HA
+   derives daily/monthly breakdowns from the cumulative counter itself).
+
+### Live monitoring dashboard (current power, grid, inverter status)
+
+An example is in [`dashboards/monitoring.yaml`](dashboards/monitoring.yaml).
+
+1. Check your real entity IDs in **Developer Tools → States** (filter `foxess`)
+   — the example file uses `SN` as a placeholder for your device's serial number.
+2. Settings → Dashboards → Add Dashboard → New dashboard from scratch → ⋮ →
+   Edit Dashboard → ⋮ → Raw configuration editor.
+3. Paste the file's contents (with your real entity IDs substituted in).
+
 ## Notes
 
 - Polling interval defaults to 300s (`DEFAULT_SCAN_INTERVAL` in `const.py`) — the

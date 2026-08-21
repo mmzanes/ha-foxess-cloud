@@ -1,0 +1,70 @@
+# Example Lovelace dashboard for live monitoring of the FoxESS Cloud integration.
+#
+# Entity IDs below are placeholders — the real ones depend on your device's
+# serial number, e.g. sensor.foxess_inverter_<SN>_pv_power. Check
+# Developer Tools -> States (filter "foxess") to get your exact IDs, then
+# find/replace "SN" below with your inverter's serial number.
+#
+# How to use: Settings -> Dashboards -> Add Dashboard -> "New dashboard from
+# scratch" -> three-dot menu -> Edit Dashboard -> three-dot menu -> Raw
+# configuration editor -> paste this content (or paste just the `views:`
+# block if your dashboard already has other views).
+
+title: Solar
+views:
+  - title: Live Monitoring
+    path: solar-live
+    icon: mdi:solar-power
+    cards:
+      - type: gauge
+        entity: sensor.foxess_inverter_SN_pv_power
+        name: PV Power
+        min: 0
+        max: 5
+        severity:
+          green: 0
+          yellow: 4
+          red: 4.5
+
+      - type: entities
+        title: Generation
+        entities:
+          - entity: sensor.foxess_inverter_SN_pv_power
+            name: PV Power
+          - entity: sensor.foxess_inverter_SN_today_s_yield
+            name: Today's Yield
+          - entity: sensor.foxess_inverter_SN_total_generation
+            name: Total Generation
+
+      - type: history-graph
+        title: PV Power (today)
+        hours_to_show: 24
+        entities:
+          - entity: sensor.foxess_inverter_SN_pv_power
+
+      - type: entities
+        title: PV Strings
+        entities:
+          - entity: sensor.foxess_inverter_SN_pv1_voltage
+          - entity: sensor.foxess_inverter_SN_pv1_current
+          - entity: sensor.foxess_inverter_SN_pv1_power
+          - entity: sensor.foxess_inverter_SN_pv2_voltage
+          - entity: sensor.foxess_inverter_SN_pv2_current
+          - entity: sensor.foxess_inverter_SN_pv2_power
+
+      - type: entities
+        title: Grid
+        entities:
+          - entity: sensor.foxess_inverter_SN_grid_voltage
+          - entity: sensor.foxess_inverter_SN_grid_current
+          - entity: sensor.foxess_inverter_SN_grid_frequency
+          - entity: sensor.foxess_inverter_SN_grid_power
+          - entity: sensor.foxess_inverter_SN_power_factor
+
+      - type: entities
+        title: Inverter Status
+        entities:
+          - entity: sensor.foxess_inverter_SN_inverter_temperature
+          - entity: sensor.foxess_inverter_SN_ambient_temperature
+          - entity: sensor.foxess_inverter_SN_running_state
+          - entity: sensor.foxess_inverter_SN_current_fault_code
